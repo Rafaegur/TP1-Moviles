@@ -25,9 +25,9 @@ class Login : AppCompatActivity() {
             val password = passwordInput.text.toString()
 
             if (username == "Juan Torres" && password == "1234utn") {
-                Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show() //El toast nos sirve para dar un PopUp, es un msg
                 // Iniciar la pantalla de bienvenida
-                val intent = Intent(this, WelcomeActivity::class.java)
+                val intent = Intent(this, WelcomeActivity::class.java) //El intent inicia una instancia de otra clase, en este caso inicia la actividad de bienvenida
                 intent.putExtra("USERNAME", username)
                 startActivity(intent)
             } else {

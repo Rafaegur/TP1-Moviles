@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity">
 
+    <!-- Mensaje de Bienvenida -->
     <TextView
         android:id="@+id/welcomeMessage"
         android:layout_width="wrap_content"
@@ -17,5 +18,105 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_marginTop="32dp"/>
+
+    <!-- Selección de Plataforma -->
+    <RadioGroup
+        android:id="@+id/platformRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/welcomeMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android" />
+
+        <RadioButton
+            android:id="@+id/radioIOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iOS" />
+    </RadioGroup>
+
+    <!-- Imagen del logo de la plataforma -->
+    <ImageView
+        android:id="@+id/platformLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/platformRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Preferencias -->
+    <TextView
+        android:id="@+id/preferencesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona tus preferencias:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/platformLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkProgramming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Programación"
+        app:layout_constraintTop_toBottomOf="@id/preferencesLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkNetworks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redes"
+        app:layout_constraintTop_toBottomOf="@id/checkProgramming"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkSecurity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seguridad"
+        app:layout_constraintTop_toBottomOf="@id/checkNetworks"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkHardware"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hardware"
+        app:layout_constraintTop_toBottomOf="@id/checkSecurity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otra"
+        app:layout_constraintTop_toBottomOf="@id/checkHardware"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Campo de texto para la opción "Otra" -->
+    <EditText
+        android:id="@+id/otherPreferenceInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Especifica tu preferencia"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/checkOther"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
