@@ -36,6 +36,28 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/username" />
 
+  <Button
+      android:id="@+id/loginButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Iniciar Sesion"
+      app:layout_constraintTop_toBottomOf="@id/password"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="32dp" />
+
+  <TextView
+      android:id="@+id/registerTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="¿No tienes una cuenta? Regístrate"
+      android:textColor="@android:color/holo_blue_dark"
+      android:textSize="16sp"
+      app:layout_constraintTop_toBottomOf="@id/loginButton"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
     <!---Comentarios sobre las etiquetas, los id son identificadores utiles para encontrarlos desde la parte logica y si
     desde la parte de diseño queremos enganchar layouts a otros layouts. Hint nos muestra un mensaje predeterminado y el resto son de orden.
