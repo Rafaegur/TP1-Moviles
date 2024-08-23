@@ -14,7 +14,7 @@
       android:id="@+id/label"
       android:layout_width="0dp"
       android:layout_height="100dp"
-      android:background="@drawable/Logo"
+      android:background="@drawable/logo"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
