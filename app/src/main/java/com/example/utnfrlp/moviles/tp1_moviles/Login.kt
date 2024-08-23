@@ -13,5 +13,6 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val usernameInput = findViewById<EditText>(R.id.username) //Creo una variable para ingresar el usuario y segun el tipo de label (EditText en este caso) y una id me lo linkea con la vista.
+        val passwordInput = findViewById<EditText>(R.id.password) //Misma logica pero para la contraseña
     }
 }
