@@ -1,5 +1,6 @@
 package com.example.utnfrlp.moviles.tp1_moviles
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
@@ -25,6 +26,10 @@ class Login : AppCompatActivity() {
 
             if (username == "Juan Torres" && password == "1234utn") {
                 Toast.makeText(this, "Login exitoso", Toast.LENGTH_SHORT).show()
+                // Iniciar la pantalla de bienvenida
+                val intent = Intent(this, WelcomeActivity::class.java)
+                intent.putExtra("USERNAME", username)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
