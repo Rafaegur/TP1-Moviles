@@ -20,8 +20,8 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.139"
-      app:layout_constraintWidth_percent="0.4" />
+      app:layout_constraintVertical_bias="0.137"
+      app:layout_constraintWidth_percent="0.33" />
 
   <EditText
       android:id="@+id/username"
@@ -65,7 +65,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="32dp"
-      android:text="Iniciar Sesion"
+      android:text="Iniciar Sesión"
       android:textColor="@color/white"
       android:background="@drawable/rounded_button"
       app:layout_constraintEnd_toEndOf="parent"
@@ -73,16 +73,29 @@
       app:layout_constraintTop_toBottomOf="@id/password" />
 
   <TextView
-      android:id="@+id/registerTextView"
+      android:id="@+id/nonRegisteredTextView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="¿No tienes una cuenta? Regístrate"
-      android:textColor="@android:color/holo_blue_dark"
+      android:text="¿No estás registrado?"
+      android:textColor="@color/secondary"
+      android:textStyle="bold"
       android:textSize="16sp"
       app:layout_constraintTop_toBottomOf="@id/loginButton"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       android:layout_marginTop="16dp" />
+
+  <TextView
+      android:id="@+id/registerTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Regístrarse"
+      android:textColor="@android:color/holo_blue_dark"
+      android:textSize="14sp"
+      app:layout_constraintTop_toBottomOf="@id/nonRegisteredTextView"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     <!---Comentarios sobre las etiquetas, los id son identificadores utiles para encontrarlos desde la parte logica y si

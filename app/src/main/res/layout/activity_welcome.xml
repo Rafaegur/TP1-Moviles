@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity"
     tools:ignore="HardcodedText">
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="¡Bienvenido!"
         android:textSize="24sp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/welcomeMessage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,13 +38,17 @@
             android:id="@+id/radioAndroid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Android" />
+            android:textColor="@color/secondary"
+            android:text="Android"
+            android:buttonTint="@color/primary_light" />
 
         <RadioButton
             android:id="@+id/radioIOS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="iOS" />
+            android:textColor="@color/secondary"
+            android:text="iOS"
+            android:buttonTint="@color/primary_light" />
     </RadioGroup>
 
     <!-- Imagen del logo de la plataforma -->
@@ -51,6 +57,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/platformRadioGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -62,6 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Selecciona tus preferencias:"
         android:textSize="18sp"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/platformLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,41 +80,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Programación"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/preferencesLabel"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:buttonTint="@color/primary_light"/>
 
     <CheckBox
         android:id="@+id/checkNetworks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Redes"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/checkProgramming"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:buttonTint="@color/primary_light"/>
 
     <CheckBox
         android:id="@+id/checkSecurity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Seguridad"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/checkNetworks"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:buttonTint="@color/primary_light"/>
 
     <CheckBox
         android:id="@+id/checkHardware"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hardware"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/checkSecurity"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:buttonTint="@color/primary_light"/>
 
     <CheckBox
         android:id="@+id/checkOther"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Otra"
+        android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/checkHardware"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:buttonTint="@color/primary_light"/>
 
     <!-- Campo de texto para la opción "Otra" -->
     <EditText
@@ -114,8 +132,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@color/secondary"
         android:hint="Especifica tu preferencia"
+        android:textColorHint="@color/secondary"
+        android:textSize="16sp"
         android:visibility="gone"
+        android:background="@drawable/rounded_edittext"
+        android:autofillHints="Name"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:minHeight="30dp"
         app:layout_constraintTop_toBottomOf="@id/checkOther"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,19 +4,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
+
+    <View
+        android:id="@+id/logoPickup"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139"
+        app:layout_constraintWidth_percent="0.4" />
 
     <EditText
         android:id="@+id/nameInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nombre"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/secondary"
+        android:autofillHints="Name"
+        android:inputType="text"
+        android:textColorHint="@color/secondary"
+        android:paddingStart="16dp"
+        android:minHeight="48dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="32dp"/>
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <EditText
         android:id="@+id/emailInput"
@@ -24,11 +46,18 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:layout_marginTop="16dp"
-        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/secondary"
+        android:autofillHints="emailAddress"
+        android:inputType="text"
+        android:textColorHint="@color/secondary"
+        android:paddingStart="16dp"
+        android:minHeight="48dp"
         app:layout_constraintTop_toBottomOf="@id/nameInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="32dp"/>
+        />
 
     <EditText
         android:id="@+id/passwordInput"
@@ -37,10 +66,16 @@
         android:hint="Contraseña"
         android:layout_marginTop="16dp"
         android:inputType="textPassword"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/secondary"
+        android:autofillHints="password"
+        android:textColorHint="@color/secondary"
+        android:paddingStart="16dp"
+        android:minHeight="48dp"
         app:layout_constraintTop_toBottomOf="@id/emailInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="32dp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/confirmPasswordInput"
@@ -49,19 +84,27 @@
         android:hint="Repetir Contraseña"
         android:layout_marginTop="16dp"
         android:inputType="textPassword"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/secondary"
+        android:autofillHints="emailAddress"
+        android:textColorHint="@color/secondary"
+        android:paddingStart="16dp"
+        android:minHeight="48dp"
         app:layout_constraintTop_toBottomOf="@id/passwordInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="32dp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrarse"
         android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/confirmPasswordInput"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirmPasswordInput"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
